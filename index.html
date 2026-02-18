@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Games Zerados</title>
+  <meta name="description" content="Minha coleção de jogos zerados — filtrados por plataforma, ano e ordem.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="header-content">
+      <div class="header-title">
+        <h1>🎮 Games Zerados</h1>
+        <span class="game-count" id="gameCount">0 jogos</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Controls Bar -->
+  <section class="controls-bar">
+    <div class="controls-content">
+
+      <!-- Filter Controls -->
+      <div class="control-group">
+        <label class="control-label">Filtrar</label>
+        <div class="filter-selects">
+          <select id="filterPlatform" class="filter-select">
+            <option value="">Todas as Plataformas</option>
+          </select>
+          <select id="filterYear" class="filter-select">
+            <option value="">Todos os Anos</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Sort Controls -->
+      <div class="control-group">
+        <label class="control-label">Ordenar por</label>
+        <div class="sort-buttons">
+          <button class="sort-btn active" data-sort="alpha-asc" id="sortAlphaAsc">A → Z</button>
+          <button class="sort-btn" data-sort="alpha-desc" id="sortAlphaDesc">Z → A</button>
+          <button class="sort-btn" data-sort="year-desc" id="sortYearDesc">Ano ↓</button>
+          <button class="sort-btn" data-sort="year-asc" id="sortYearAsc">Ano ↑</button>
+          <button class="sort-btn" data-sort="platform" id="sortPlatform">Plataforma</button>
+        </div>
+      </div>
+
+      <div style="display:flex;align-items:center;gap:12px;margin-left:auto;">
+        <button id="btnUpdateCovers" class="sort-btn">Atualizar Capas</button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Games Grid -->
+  <main class="main-content">
+    <div class="loading-state" id="loadingState">
+      <div class="spinner"></div>
+      <p>Carregando jogos...</p>
+    </div>
+    <div class="empty-state hidden" id="emptyState">
+      <span class="empty-icon">🕹️</span>
+      <p>Nenhum jogo encontrado com esses filtros.</p>
+    </div>
+    <div class="games-grid" id="gamesGrid"></div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <p>Feito com ♥ — Dados via Google Sheets</p>
+  </footer>
+
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
