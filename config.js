@@ -14,7 +14,8 @@ const getConfig = (key, fallback = '') => {
 };
 
 const SHEET_ID = getConfig('SHEET_ID', '1_olnGNSI6Nqrx-zDAMN7S629-pIh6mKg4mupi6axctw');
-const SHEET_TAB = getConfig('SHEET_TAB', 'Games Zerados');
+// SHEET_TAB não precisa ser secret - é apenas o nome da aba
+const SHEET_TAB = 'Games Zerados';
 
 // URL original para buscar CSV publicado
 const ORIGINAL_CSV_URL = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:csv&sheet=${SHEET_TAB}`;
