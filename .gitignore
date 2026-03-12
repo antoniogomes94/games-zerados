@@ -1,7 +1,28 @@
-# Ignore config file with API keys
-config.js
+# Environment variables (local configuration with secrets)
+.env
+.env.local
+.env.*.local
 
-# Other common ignores
+# Dependencies
 node_modules/
+package-lock.json
+yarn.lock
+
+# Logs
 *.log
+npm-debug.log*
+
+# OS
 .DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Build/dist
+dist/
+build/
